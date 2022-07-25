@@ -1,5 +1,6 @@
 # jni-test
-
+graalvm project,both jar and native image are running successfully.
+***
 **mvn clean package**
 
 1. cd /target
@@ -7,16 +8,18 @@
 2. java -jar jni-test-1.0-SNAPSHOT-jar-with-dependencies.jar
 
    ```
+   output:
    /lib64/libhello.so exists? true
    load succeed! /lib64/libhello.so
    Hello JNI!
    ```
-***
+**mvn clean package**
 1. cd /target
 
 2. ./jni-test
 
    ```
+   output:
    /lib64/libhello.so exists? true
    load succeed! /lib64/libhello.so
    Hello JNI!
@@ -25,7 +28,8 @@
    
 
 # jni-quarkus-test
-
+Quarkus project, the native image failed to run.
+***
 **mvn clean package -Pnative**
 
 1. cd /target/jni-quarkus-test-1.0-SNAPSHOT-native-image-source-jar
@@ -33,6 +37,7 @@
 2. java -jar jni-quarkus-test-1.0-SNAPSHOT-runner.jar
 
    ```
+   output
    /lib64/libhello.so exists? true
    load succeed! /lib64/libhello.so
    __  ____  __  _____   ___  __ ____  ______ 
@@ -46,12 +51,13 @@
    Hello JNI!
    ```
 
-***
+**mvn clean package -Pnative**
 1. cd /target
 
 2. ./jni-quarkus-test-1.0-SNAPSHOT-runner
 
    ```
+   output:
    __  ____  __  _____   ___  __ ____  ______ 
     --/ __ \/ / / / _ | / _ \/ //_/ / / / __/ 
     -/ /_/ / /_/ / __ |/ , _/ ,< / /_/ /\ \   
