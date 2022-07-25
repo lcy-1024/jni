@@ -2,7 +2,7 @@
 graalvm project,both jar and native image are running successfully.
 ***
 **mvn clean package**
-
+* jar
 1. cd /target
 
 2. java -jar jni-test-1.0-SNAPSHOT-jar-with-dependencies.jar
@@ -13,7 +13,7 @@ graalvm project,both jar and native image are running successfully.
    load succeed! /lib64/libhello.so
    Hello JNI!
    ```
-**mvn clean package**
+* native image
 1. cd /target
 
 2. ./jni-test
@@ -31,7 +31,7 @@ graalvm project,both jar and native image are running successfully.
 Quarkus project, the native image failed to run.
 ***
 **mvn clean package -Pnative**
-
+* jar
 1. cd /target/jni-quarkus-test-1.0-SNAPSHOT-native-image-source-jar
 
 2. java -jar jni-quarkus-test-1.0-SNAPSHOT-runner.jar
@@ -51,7 +51,7 @@ Quarkus project, the native image failed to run.
    Hello JNI!
    ```
 
-**mvn clean package -Pnative**
+* native image
 1. cd /target
 
 2. ./jni-quarkus-test-1.0-SNAPSHOT-runner
